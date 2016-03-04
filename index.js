@@ -5,7 +5,7 @@ var bodyParser = require('body-parser')
 var compression = require('compression')
 
 var app = express()
-var TX_URI = new RegExp("^https://btc.blockr.io/api/v1/tx/raw/")
+var TX_URI = new RegExp("^https://btc.blockr.io/api/v1/")
 
 function allowCrossDomain(req, res, next) {
   res.header('Access-Control-Allow-Origin', process.env.CORS_ORIGINS)
