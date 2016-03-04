@@ -25,8 +25,7 @@ app.post('/', function(req, res){
   request({
     method: 'POST',
     uri: req.query.url,
-    body: JSON.stringify({rawtx: req.body.rawtx}),
-    header: { "Content-Type": "application/json" }
+    json: {"rawtx": req.body.rawtx}
   }, function(err, response, body){
     res.statusCode = response.statusCode
     res.send(body);
